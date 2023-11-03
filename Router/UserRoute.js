@@ -2,8 +2,11 @@ const { addToCart, fetchCartData, removeProduct } = require('../Controller/CartC
 const { orderAdd, fetchAllOrder, fetchOrder } = require('../Controller/OrderCont');
 const { addProductsToDb, fetchData, deleteProd, addProducts } = require('../Controller/ProductsCont');
 const { RegisterUser, LoginUser } = require('../Controller/UserCont');
+const Product = require('../db/ProductData');
 
 const userRoute = require('express').Router();
+
+userRoute.get("/data", Product)
 
 userRoute.post("/reg", RegisterUser)
 userRoute.post("/log", LoginUser)
