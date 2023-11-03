@@ -1,5 +1,5 @@
 const { addToCart, fetchCartData, removeProduct } = require('../Controller/CartCont');
-const { orderAdd, fetchAllOrder } = require('../Controller/OrderCont');
+const { orderAdd, fetchAllOrder, fetchOrder } = require('../Controller/OrderCont');
 const { addProductsToDb, fetchData, deleteProd, addProducts } = require('../Controller/ProductsCont');
 const { RegisterUser, LoginUser } = require('../Controller/UserCont');
 
@@ -23,7 +23,7 @@ userRoute.delete("/del/:product_id", removeProduct)
 // Order wale
 userRoute.post("/addOrder", orderAdd);
 userRoute.get("/ordersdetail", fetchAllOrder)
-
+userRoute.get("/orderbyuser/:user_id", fetchOrder)
 
 
 
