@@ -22,7 +22,13 @@ const userSchema = new mongoose.Schema({
     year: {
         type: Number,
         required: true,
-    }
+    },
+    courses: {
+        type: [mongoose.Schema.Types.ObjectId],
+        ref: "Course",
+
+    },
+
 
 })
 

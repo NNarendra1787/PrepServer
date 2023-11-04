@@ -1,6 +1,6 @@
 const { addToCart, fetchCartData, removeProduct } = require('../Controller/CartCont');
 const { orderAdd, fetchAllOrder, fetchOrder } = require('../Controller/OrderCont');
-const { addProductsToDb, fetchData, deleteProd, addProducts } = require('../Controller/ProductsCont');
+const { addProductsToDb, fetchData, deleteProd, addProducts, newOrder, orderCapture } = require('../Controller/ProductsCont');
 const { RegisterUser, LoginUser } = require('../Controller/UserCont');
 const Product = require('../db/ProductData');
 
@@ -28,6 +28,11 @@ userRoute.post("/addOrder", orderAdd);
 userRoute.get("/ordersdetail", fetchAllOrder)
 userRoute.get("/orderbyuser/:user_id", fetchOrder)
 
+
+// Payment Wala Hai
+userRoute.post("/api/orders", newOrder)
+
+userRoute.post("/api/orders/:order_id/capture", orderCapture)
 
 
 module.exports = userRoute
