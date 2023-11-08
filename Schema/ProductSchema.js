@@ -22,12 +22,16 @@ const ProductSchema = new mongoose.Schema({
         // required: true,
     },
     pip: {
-        type: String,
+        type: Number,
         // required: true,
     },
     part: {
         type: String,
         // required: true,
+    },
+    price: {
+        type: Number,
+        // required: true
     },
     time : {
         type: String,
