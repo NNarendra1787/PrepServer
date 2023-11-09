@@ -49,8 +49,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
       mode: "payment",
       // success_url: "https://pb-clone-nitinrajputind.vercel.app/dashBoard",
       // cancel_url: "https://pb-clone-nitinrajputind.vercel.app/cancel",
-      success_url: "https://precious-phoenix-7bfe4a.netlify.app/dashboard",
-      cancel_url: "https://precious-phoenix-7bfe4a.netlify.app/cancle",
+      success_url: "https://prepbytes-demo.vercel.app/dashboard",
+      cancel_url: "https://prepbytes-demo.vercel.app/cancle",
   
     });
     res.json({id:session.id})
